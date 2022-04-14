@@ -1,0 +1,68 @@
+.film{
+    & h2{
+        position: relative;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        padding: 10;
+        width: 50%;
+        padding: 10px 0;
+        &::before{
+            content: '';
+            display: inline-block;
+            border-bottom: 3px solid $color-text-secondary;
+            width: 12rem;
+            position: absolute;
+            bottom: -2px;
+        
+        }
+    }
+    & .film__content{
+        padding: 0 1rem;
+        & img{
+            max-width: 100%;
+        }
+        & .film__item{
+            & .film__item--title{
+                & h5{
+                    font-size: 1.1rem;
+                    color: $color-text-primary;
+                }
+                & h5:nth-child(2){
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+            & .film__item--img{
+                 position: relative;
+                & .overPlay{
+                    opacity: 0;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.3s;
+                    & a{
+                        @include setButtunBuySmall(inline-block, 14px, 1px, uppercase, transparent, none, 1, 14px 20px, $color-text-basic);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border: 1px solid rgba(255, 255, 255, 0.6);
+                        transition: all 0.3s;
+                        &:hover{
+                            background-color: $color-text-secondary;
+                            transition: all 0.3s;
+                        }
+                    }
+                }
+                &:hover .overPlay{
+                    opacity: 1;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

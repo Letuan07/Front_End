@@ -1,0 +1,38 @@
+// Phần Nav Menu
+.nav__menu{
+    text-align: right;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    background-color: $color-primary;
+    & .menu__list{
+        padding-right: 20px;
+        & .search{
+            & input{
+                @include SetInputSearch(1px solid rgba(0, 0, 0, 0.2), 2rem, 10px);
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            & button{
+                @include SetButtonSearch(none, 0%, #fff, relative, 0px, 6%, 1rem);
+            }
+        }
+        & ul{
+            list-style: none;
+            line-height: 2.5;
+            margin-top: 10px;
+            & li{
+                & a{
+                    // @include StyleText(inherit, 600, inherit);
+                    @extend %SetATagOfTitle;
+                }
+                & i{
+                    margin-left: 5px;   
+                }
+            }
+        }
+    }
+    
+}

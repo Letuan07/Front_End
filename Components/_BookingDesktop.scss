@@ -1,0 +1,57 @@
+.booking-slide{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+    & .booking__title{
+        background-color: $color-text-secondary;
+        color: $color-text-basic;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 12px 18px;
+        max-width: 50%;
+    }
+    & .btn-buy {
+        text-align: right;
+        margin-bottom: 1rem;
+        margin-right: 10px;
+        & > a{
+            @extend %SetBtnBuySmall;
+        }
+    }
+    & .booking__content{
+        &{
+            margin: 12px 10px 8px 10px;
+        }
+        & .myNav label{
+            background-color: transparent;
+            border: none;
+            color: $color-text-basic;
+            font-weight: 300;
+            &:hover{
+                color: $color-text-secondary;
+                border-bottom: 1px solid $color-text-secondary;
+            }
+            &.active{
+                color: $color-text-secondary !important;
+                border-bottom: 1px solid $color-text-secondary !important;
+                z-index: 9;
+            }
+        }
+        & .booking--form{
+            margin-top: .5rem;
+            & select{
+                margin: 8px 0;
+                height: 38px;
+                background: rgba(235, 228, 228, 0.5);
+                color: $color-text-basic;
+                &:focus-visible{
+                    outline: none;
+                }
+                & option{
+                    color: $color-text-primary;
+                }
+            }
+        }
+    }
+}

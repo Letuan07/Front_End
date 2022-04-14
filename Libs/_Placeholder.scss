@@ -1,0 +1,31 @@
+%SetATagOfMenu{
+    font-size: 14px;
+    color: $color-text-basic;
+    text-decoration: none;
+    font-weight: 600;
+}
+%SetATagOfTitle{
+    font-size: 18px;
+    color: $color-text-primary;
+    text-decoration: none;
+}
+%PropertyOfOverlayClass{
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+%SetBtnBuySmall{
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-text-basic;
+    background-color: $color-text-secondary;
+    padding: 15px;
+    text-decoration: none;
+    line-height: 1;
+}

@@ -1,0 +1,63 @@
+@include ReponsiveMobileFrist("medium"){
+    .header--mobile{
+        display: none;
+    }
+}
+.header--mobile{
+    align-items: center;
+    height: 90px;
+    background-color: #f7f9fa;
+    padding: 0 2rem;
+    overflow-x: hidden;
+    position: relative;
+    & .header__logo--mobile{
+        img{
+            width: 65%;
+        }
+    }
+    & .header__icon--mobile{
+        text-align: right;
+        padding: 0%;
+        & > span > i{
+            font-size: 22px;
+        }
+        & button{
+            position: relative;
+            border: none;
+            background-color: inherit;
+            padding: 0%;
+            & > i{
+                margin-left: 1rem;
+                font-size: 2rem;
+                display: none;
+               
+            }
+            & i:nth-child(2){
+                display: none;
+                
+            }
+        }
+        & .fixed-mobile{
+            position: absolute;
+            top: 0%;
+            right: 0;
+            width: 100%;
+            height: 90px;
+            background-color: $color-primary !important;
+            // visibility: hidden;
+            transform: translateX(100%);
+            & >i{
+                font-size: 3rem;
+                margin: 1rem 2rem 0 0;
+            }
+        }
+        & .menu-mobile{
+            width: 100%;
+            height: 100%;
+            background-color: $color-primary;
+        }
+    }
+}
+.active{
+    display: block !important;
+}
