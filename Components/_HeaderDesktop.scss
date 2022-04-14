@@ -1,0 +1,52 @@
+.header--desktop{
+    align-items: center;
+    height: 80px;
+    background-color: #f7f9fa;
+    img{
+        width: 100%;
+    }
+    & .header__search{
+        text-align: center;
+        & .search{
+            position: relative;
+
+            input{
+                // border: 1px solid rgba(0, 0, 0, 0.2);
+                // padding-right: 2rem;
+                // padding-left: 10px;
+                
+                @include SetInputSearch(1px solid rgba(0, 0, 0, 0.2), 2rem, 10px);
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            button{
+                // padding: 0%;
+                // border: none;
+                // background-color: #fff;
+                // position: relative;  /*Relative giúp cho element 
+                //                     không bị thay đổi vị trí nhu absolute*/
+                // top: 0px;
+                // right: 7%;
+                // font-size: 1rem;
+                @include SetButtonSearch(none, 0%, #fff, relative, 0px, 6%, 1rem);
+            }
+        }
+    }
+    & .header__user{
+        display: flex;
+        font-size: 14px;
+        color: $color-text-primary;
+        margin-top: 10px;
+        justify-content: right;
+        padding-right: 2rem;
+        & p:nth-child(1){
+            margin-right: 1rem;
+        }
+    }
+}
+@include ReponsiveDesktopFrist("medium"){
+    .header--desktop{
+        display: none;
+    }
+}

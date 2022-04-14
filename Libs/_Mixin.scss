@@ -1,0 +1,64 @@
+@mixin StyleText($fs, $fw, $color) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+@mixin AddImageByCSS3($url, $position, $repeat, $clip, $size, $height){
+    background-image: $url;
+    background-position: $position;
+    background-repeat: $repeat;
+    background-clip: $clip;
+    background-size: $size;
+    height: $height;
+}
+@mixin ReponsiveDesktopFrist($screen) {
+    @if (map-has-key($map: $breakpoint, $key: $screen)) {
+      $value: map-get(
+        $map: $breakpoint,
+        $key: $screen,
+      );
+      @media screen and (max-width: $value) {
+        @content;
+      }
+    } @else {
+      @warn "`{$screen}` không tồn tại";
+    }
+}
+@mixin ReponsiveMobileFrist($screen) {
+  @if (map-has-key($map: $breakpoint, $key: $screen)) {
+    $value: map-get(
+      $map: $breakpoint,
+      $key: $screen,
+    );
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "`{$screen}` không tồn tại";
+  }
+}
+@mixin SetInputSearch($bd, $pd-r, $pd-l){
+  border: $bd;
+  padding-right: $pd-r;
+  padding-left: $pd-l;
+}
+@mixin SetButtonSearch($bd, $pd, $bg, $position, $top, $right, $fs){
+  border: $bd;
+  padding: $pd;
+  background-color: $bg;
+  position: $position;
+  top: $top;
+  right: $right;
+  font-size: $fs;
+}
+@mixin setButtunBuySmall($dp, $fs, $ls, $tt, $bg, $td, $lh, $pd, $color) {
+  display: $dp;
+  font-size: $fs;
+  letter-spacing: $ls;
+  text-transform: $tt;
+  background-color: $bg;
+  text-decoration: $td;
+  line-height: $lh;
+  padding: $pd;
+  color: $color;
+}
