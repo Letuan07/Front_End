@@ -23,6 +23,21 @@
         &{
             margin: 12px 10px 8px 10px;
         }
+        & .myNav label{
+            background-color: transparent;
+            border: none;
+            color: $color-text-basic;
+            font-weight: 300;
+            &:hover{
+                color: $color-text-secondary;
+                border-bottom: 1px solid $color-text-secondary;
+            }
+            &.active{
+                color: $color-text-secondary !important;
+                border-bottom: 1px solid $color-text-secondary !important;
+                z-index: 9;
+            }
+        }
         & .booking--form{
             margin-top: .5rem;
             & select{

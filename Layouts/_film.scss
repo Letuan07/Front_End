@@ -1,8 +1,22 @@
 .film{
     & h2{
-        margin-bottom: 2rem;
+        position: relative;
+        margin-bottom: 1rem;
         margin-left: 1rem;
         font-size: 1.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        padding: 10;
+        width: 50%;
+        padding: 10px 0;
+        &::before{
+            content: '';
+            display: inline-block;
+            border-bottom: 3px solid $color-text-secondary;
+            width: 12rem;
+            position: absolute;
+            bottom: -2px;
+        
+        }
     }
     & .film__content{
         padding: 0 1rem;
